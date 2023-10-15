@@ -85,12 +85,6 @@ defmodule Tutorials do
 
 		groupedUsers = Enum.group_by(new_peoples, &(&1.group))
 
-		# startDateCP = Date.from_iso8601("2023-01-10") |> Date.to_utc()
-		# endDateCP = Date.from_iso8601("2023-03-10") |> Date.to_utc()
-		# dateRangeUsers = Enum.filter(new_peoples, fn person ->
-		# 	Date.compare(Date.from_iso8601(person.startDate) |> Date.to_utc(), startDateCP) >= 0 && Date.compare(Date.from_iso8601(person.endDate) |> Date.to_utc(), endDateCP) <= 0
-		# end)
-
 		filteredDataUsers = Enum.map(new_peoples, fn %{name: name, age: age, gender: gender} ->
 			%{name: name, age: age, gender: gender}
 		end)
